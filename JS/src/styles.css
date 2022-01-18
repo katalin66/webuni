@@ -1,0 +1,73 @@
+:root {
+  --primary-color: #0C4FB3;
+  --secondary-color: #FFB521;
+  --header-height: 70px;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4a4a4a;
+}
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+.header {
+  height: var(--header-height);
+  line-height: var(--header-height); /* függőlegesen középre kerül a szöveg*/
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  margin-top: calc(var(--header-height) + 16px); /* hogy ne csússzon be a header alá felfele*/
+}
+#quiz-container {
+  width: 80%;
+}
+.question {
+  border: 2px solid black;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+.question-header {
+  padding: 32px 16px;
+  background-color: var(--secondary-color);
+}
+.question-answers {
+  border-top: 1px solid black;
+}
+.answer {
+  border-top: 1px solid black;
+  padding: 12px 8px;
+  text-align: center;
+  cursor: pointer;
+}
+.correct {
+  background-color: #9da848;
+}
+.incorrect {
+  background-color: #c72c37;
+  color: #fff;
+}
+.points-container {
+  --height: 80px;
+
+  position: fixed;
+  top: calc(50% - var(--height) / 2);
+  background-color: var(--primary-color);
+  height: var(--height);
+  color: white;
+  line-height: var(--height);
+  width: 50px;
+  border-radius: 0 6px 6px 0;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
